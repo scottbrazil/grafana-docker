@@ -19,6 +19,7 @@ services:
     volumes:
       - grafana-storage:/var/lib/grafana
       - ./provisioning:/etc/grafana/provisioning
+      - ./custom.ini:/usr/share/grafana/conf/custom.ini
     depends_on:
       - prometheus
     restart: unless-stopped
